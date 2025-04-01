@@ -41,7 +41,7 @@ public class StudentController {
             student.get().setStudentAddress(std.getStudentAddress());
             student.get().setStudentEmail(std.getStudentEmail());
             student.get().setStudentName(std.getStudentName());
-            return new ResponseEntity<>(studentRepository.save(student.get()),HttpStatus.OK);
+            return new ResponseEntity<>(studentRepository.save(student.get()),HttpStatus.CREATED);
         }else{
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
